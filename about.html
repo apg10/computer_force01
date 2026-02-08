@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Computer Force</title>
+  <meta name="description" content="Learn about Computer Force: our story, what we do, and how we help customers choose the right tech." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Computer Force Home">
+        <img class="logo-img" src="assets/img/logo.png" alt="Computer Force logo">
+        <span class="logo-text">Computer Force</span>
+      </a>
+
+      <div class="header-actions" aria-label="Mobile controls">
+        <button id="burgerBtn" class="icon-btn icon-btn--burger" type="button"
+          aria-expanded="false" aria-controls="mobileMenuPanel">
+          ☰ <span class="sr-only">Menu</span>
+        </button>
+
+        <button id="bagBtn" class="icon-btn icon-btn--bag" type="button"
+          aria-expanded="false" aria-controls="cartDrawer">
+          🛍 <span class="cart-badge" aria-label="Items in cart">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-menu" aria-label="Primary">
+    <div class="container menu-inner">
+      <div class="menu-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="developer.html">Developer</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+
+      <form class="menu-search" action="#" method="get" role="search" aria-label="Site search">
+        <input type="search" name="q" placeholder="Search products…">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <div id="mobileMenuPanel" class="mobile-panel" hidden>
+      <div class="container mobile-panel-inner">
+        <div class="menu-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="developer.html">Developer</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+
+        <form class="menu-search" action="#" method="get" role="search" aria-label="Site search (mobile)">
+          <input type="search" name="q" placeholder="Search products…">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div id="drawerOverlay" class="drawer-overlay" hidden></div>
+
+  <aside id="cartDrawer" class="cart-drawer" hidden aria-label="Cart drawer">
+    <div class="cart-drawer__head">
+      <h2 class="cart-drawer__title">Your cart</h2>
+      <button id="closeDrawerBtn" class="icon-btn icon-btn--close" type="button">Close</button>
+    </div>
+
+    <div class="cart-drawer__body">
+      <p>Your cart is empty.</p>
+      <button class="btn btn-primary btn-checkout" type="button">Checkout</button>
+    </div>
+  </aside>
+
+  <div class="page-shell">
+    <div class="container layout">
+
+      <main id="main" class="site-main">
+        <section class="about-page" aria-label="About Computer Force">
+
+          <div class="about-hero">
+            <div class="about-hero__inner">
+
+              <div class="about-hero__left">
+                <span class="about-pill">Computer Force</span>
+
+                <h1 class="about-title">
+                  ABOUT <span>US</span>
+                </h1>
+
+                <p class="about-lead">
+                  We help people choose the right computers, components, and peripherals with confidence.
+                  Reliable advice, curated products, and a straightforward shopping experience.
+                </p>
+
+                <div class="about-actions" aria-label="Quick actions">
+                  <a class="about-link" href="products.html">Browse Products</a>
+                  <a class="about-link" href="register.html">Create Account</a>
+                </div>
+
+                <div class="about-stats" aria-label="Highlights">
+                  <article class="about-stat">
+                    <div class="about-stat__value">20+</div>
+                    <div class="about-stat__label">Years in tech retail</div>
+                  </article>
+
+                  <article class="about-stat">
+                    <div class="about-stat__value">1,000+</div>
+                    <div class="about-stat__label">Customers helped</div>
+                  </article>
+
+                  <article class="about-stat">
+                    <div class="about-stat__value">Fast</div>
+                    <div class="about-stat__label">Local delivery options</div>
+                  </article>
+                </div>
+              </div>
+
+              <div class="about-hero__right" aria-label="About image">
+                <img
+                  src="assets/img/tech_staff.png"
+                  alt="Computer Force team and workspace"
+                  class="about-hero__img">
+              </div>
+
+            </div>
+          </div>
+
+          <div class="about-content">
+            <h2>What we do</h2>
+            <p>
+              We focus on a clean, tech-store style experience: clear categories, simple navigation,
+              and product discovery that feels fast and modern.
+            </p>
+
+            <h2>Why customers choose us</h2>
+            <ul class="bullet">
+              <li>Curated range across computers, laptops, and peripherals</li>
+              <li>Clear, practical guidance without sales pressure</li>
+              <li>Simple checkout flow and transparent totals</li>
+            </ul>
+
+            <h2>Need help?</h2>
+            <p>
+              Visit our Products page to browse categories, or create an account to get started.
+            </p>
+          </div>
+
+        </section>
+      </main>
+
+      <aside class="site-aside" aria-label="Cart summary">
+        <h2>Cart</h2>
+        <table class="purchase-table" aria-label="Purchase summary">
+          <tr><td>Subtotal</td><td class="price-col">$0.00</td></tr>
+          <tr><td>Shipping</td><td class="price-col">$0.00</td></tr>
+          <tr class="purchase-total"><td>Total</td><td class="price-col">$0.00</td></tr>
+        </table>
+        <button class="btn btn-primary btn-checkout" type="button">Checkout</button>
+      </aside>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copy">© Adrian Posada 2026</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

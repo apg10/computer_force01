@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Profile - Computer Force</title>
+  <meta name="description" content="Developer profile page for Computer Force" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Computer Force Home">
+        <img class="logo-img" src="assets/img/logo.png" alt="Computer Force logo">
+        <span class="logo-text">Computer Force</span>
+      </a>
+
+      <div class="header-actions" aria-label="Mobile controls">
+        <button id="burgerBtn" class="icon-btn icon-btn--burger" type="button"
+          aria-expanded="false" aria-controls="mobileMenuPanel">
+          ☰ <span class="sr-only">Menu</span>
+        </button>
+
+        <button id="bagBtn" class="icon-btn icon-btn--bag" type="button"
+          aria-expanded="false" aria-controls="cartDrawer">
+          🛍 <span class="cart-badge" aria-label="Items in cart">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-menu" aria-label="Primary">
+    <div class="container menu-inner">
+      <div class="menu-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="developer.html">Developer</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+
+      <form class="menu-search" action="#" method="get" role="search" aria-label="Site search">
+        <input type="search" name="q" placeholder="Search products…">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <div id="mobileMenuPanel" class="mobile-panel" hidden>
+      <div class="container mobile-panel-inner">
+        <div class="menu-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="developer.html">Developer</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+
+        <form class="menu-search" action="#" method="get" role="search" aria-label="Site search (mobile)">
+          <input type="search" name="q" placeholder="Search products…">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div id="drawerOverlay" class="drawer-overlay" hidden></div>
+
+  <aside id="cartDrawer" class="cart-drawer" hidden aria-label="Cart drawer">
+    <div class="cart-drawer__head">
+      <h2 class="cart-drawer__title">Your cart</h2>
+      <button id="closeDrawerBtn" class="icon-btn icon-btn--close" type="button">Close</button>
+    </div>
+
+    <div class="cart-drawer__body">
+      <p>Your cart is empty.</p>
+      <button class="btn btn-primary btn-checkout" type="button">Checkout</button>
+    </div>
+  </aside>
+
+  <div class="page-shell">
+    <main id="main" class="site-main">
+
+      <section class="dev-hero">
+        <div class="dev-hero-inner">
+          <div>
+            <p class="dev-badge">Developer Profile</p>
+            <h1 class="dev-title">Hi, I’m Adrian Posada</h1>
+            <p class="dev-subtitle">
+              Backend-focused developer (Python/Django) building clean, reliable web apps with practical UX and responsive layouts.
+            </p>
+          </div>
+
+          <div class="dev-card">
+            <h2>Quick bio</h2>
+            <p>
+              I enjoy building systems that are simple to use and easy to maintain. My focus is writing clear backend logic,
+              designing clean templates, and ensuring the site works smoothly on both desktop and mobile.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="dev-section">
+        <h2>Core skills</h2>
+        <div class="chip-grid">
+          <span class="chip">Python</span>
+          <span class="chip">Django (MTV)</span>
+          <span class="chip">Templates & Context</span>
+          <span class="chip">REST basics</span>
+          <span class="chip">SQL / ORM</span>
+          <span class="chip">HTML/CSS</span>
+          <span class="chip">Responsive UI</span>
+          <span class="chip">Accessibility basics</span>
+          <span class="chip">Git & GitHub</span>
+        </div>
+      </section>
+
+      <section class="dev-section">
+        <h2>Highlights</h2>
+        <div class="feature-grid">
+          <article class="feature">
+            <h3>Backend-first development</h3>
+            <p>Comfortable building CRUD workflows, validation, and clean server-side rendering with Django templates.</p>
+          </article>
+
+          <article class="feature">
+            <h3>UI that matches requirements</h3>
+            <p>Build layouts from specs and wireframes, keeping consistency across pages and devices.</p>
+          </article>
+
+          <article class="feature">
+            <h3>Practical tooling</h3>
+            <p>Version control with Git, structured project setup, and deploy-ready habits.</p>
+          </article>
+
+          <article class="feature">
+            <h3>Problem solving mindset</h3>
+            <p>I break tasks into clear steps, test changes incrementally, and document decisions for future maintenance.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="dev-section">
+        <h2>Hobbies</h2>
+        <ul class="dev-list">
+          <li><strong>Sim racing:</strong> I enjoy racing sims and improving setups/consistency.</li>
+          <li><strong>Gaming:</strong> Story-driven and competitive games on PC.</li>
+          <li><strong>Fitness:</strong> Running and strength training to stay consistent and focused.</li>
+        </ul>
+      </section>
+
+      <section class="dev-section">
+        <h2>Project stack (Computer Force)</h2>
+        <ul class="dev-list">
+          <li><strong>Django:</strong> routing, views, templates</li>
+          <li><strong>HTML/CSS:</strong> reusable components and responsive layout</li>
+          <li><strong>Accessibility:</strong> semantic markup and keyboard-friendly navigation</li>
+        </ul>
+      </section>
+
+      <div class="container" style="padding-bottom: 18px;"></div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copy">© Adrian Posada 2026</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

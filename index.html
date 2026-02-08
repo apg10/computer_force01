@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Computer Force</title>
+  <meta name="description" content="Welcome to Computer Force" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Computer Force Home">
+        <img class="logo-img" src="assets/img/logo.png" alt="Computer Force logo">
+        <span class="logo-text">Computer Force</span>
+      </a>
+
+      <div class="header-actions" aria-label="Mobile controls">
+        <button id="burgerBtn" class="icon-btn icon-btn--burger" type="button"
+          aria-expanded="false" aria-controls="mobileMenuPanel">
+          ☰ <span class="sr-only">Menu</span>
+        </button>
+
+        <button id="bagBtn" class="icon-btn icon-btn--bag" type="button"
+          aria-expanded="false" aria-controls="cartDrawer">
+          🛍 <span class="cart-badge" aria-label="Items in cart">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-menu" aria-label="Primary">
+    <div class="container menu-inner">
+      <div class="menu-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="developer.html">Developer</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+
+      <form class="menu-search" action="#" method="get" role="search" aria-label="Site search">
+        <input type="search" name="q" placeholder="Search products…">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <div id="mobileMenuPanel" class="mobile-panel" hidden>
+      <div class="container mobile-panel-inner">
+        <div class="menu-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="developer.html">Developer</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+
+        <form class="menu-search" action="#" method="get" role="search" aria-label="Site search (mobile)">
+          <input type="search" name="q" placeholder="Search products…">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div id="drawerOverlay" class="drawer-overlay" hidden></div>
+
+  <aside id="cartDrawer" class="cart-drawer" hidden aria-label="Cart drawer">
+    <div class="cart-drawer__head">
+      <h2 class="cart-drawer__title">Your cart</h2>
+      <button id="closeDrawerBtn" class="icon-btn icon-btn--close" type="button">Close</button>
+    </div>
+
+    <div class="cart-drawer__body">
+      <p>Your cart is empty.</p>
+      <button class="btn btn-primary btn-checkout" type="button">Checkout</button>
+    </div>
+  </aside>
+
+  <div class="page-shell">
+    <div class="container layout">
+
+      <main id="main" class="site-main">
+        <div class="home-page">
+
+          <section class="hero" aria-label="Welcome">
+            <div class="hero-inner">
+              <div class="hero-left">
+                <div class="hero-badge" aria-label="Computer Force">
+                  <img class="hero-badge__logo" src="assets/img/logo.png" alt="" aria-hidden="true">
+                  <span class="hero-badge__text">Computer Force</span>
+                </div>
+                <h1 class="hero-title">Welcome to Computer Force</h1>
+                <p class="hero-subtitle">
+                  Computer Force is your online expert in all things computing.
+                </p>
+
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="products.html">Browse Products</a>
+                  <a class="btn btn-outline" href="register.html">Create Account</a>
+                </div>
+
+                <p class="hero-note">No account needed to browse.</p>
+              </div>
+
+              <div class="hero-right" aria-label="Highlights">
+                <div class="hero-panel">
+                  <h3 class="hero-panel-title">Why choose us</h3>
+                  <p class="hero-panel-subtitle">A clean, reliable shopping experience.</p>
+
+                  <ul class="hero-features" aria-label="Key benefits">
+                    <li class="hero-feature">
+                      <span class="hero-icon" aria-hidden="true">🚚</span>
+                      <div>
+                        <strong>Fast delivery</strong>
+                        <span>Reliable dispatch & tracking</span>
+                      </div>
+                    </li>
+
+                    <li class="hero-feature">
+                      <span class="hero-icon" aria-hidden="true">🔒</span>
+                      <div>
+                        <strong>Secure checkout</strong>
+                        <span>Safe payments & privacy</span>
+                      </div>
+                    </li>
+
+                    <li class="hero-feature">
+                      <span class="hero-icon" aria-hidden="true">🛡️</span>
+                      <div>
+                        <strong>Warranty support</strong>
+                        <span>Clear returns and warranty</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <section aria-label="Main product categories">
+            <div class="category-grid">
+
+              <a class="category-tile" href="products.html#computers">
+                <div class="category-tile__img">
+                  <img src="assets/img/computers.png" alt="Computers category image">
+                </div>
+                <div class="category-tile__label">Computers</div>
+              </a>
+
+              <a class="category-tile" href="products.html#laptops">
+                <div class="category-tile__img">
+                  <img src="assets/img/laptops.png" alt="Laptops category image">
+                </div>
+                <div class="category-tile__label">Laptops</div>
+              </a>
+
+              <a class="category-tile" href="products.html#monitors">
+                <div class="category-tile__img">
+                  <img src="assets/img/monitors.png" alt="Monitors category image">
+                </div>
+                <div class="category-tile__label">Monitors</div>
+              </a>
+
+              <a class="category-tile" href="products.html#tablets">
+                <div class="category-tile__img">
+                  <img src="assets/img/tablets.png" alt="Tablets category image">
+                </div>
+                <div class="category-tile__label">Tablets</div>
+              </a>
+
+              <a class="category-tile" href="products.html#audio">
+                <div class="category-tile__img">
+                  <img src="assets/img/microphone.png" alt="Audio category image">
+                </div>
+                <div class="category-tile__label">Audio</div>
+              </a>
+
+              <a class="category-tile" href="products.html#graphics-cards">
+                <div class="category-tile__img">
+                  <img src="assets/img/gpu.png" alt="Graphics cards category image">
+                </div>
+                <div class="category-tile__label">Graphics cards</div>
+              </a>
+
+              <a class="category-tile" href="products.html#keyboard-mice">
+                <div class="category-tile__img">
+                  <img src="assets/img/keyboard.png" alt="Keyboard and mice category image">
+                </div>
+                <div class="category-tile__label">Keyboard and mouse</div>
+              </a>
+
+              <a class="category-tile" href="products.html#software">
+                <div class="category-tile__img">
+                  <img src="assets/img/software.png" alt="Software category image">
+                </div>
+                <div class="category-tile__label">Software</div>
+              </a>
+
+            </div>
+          </section>
+
+        </div>
+      </main>
+
+      <aside class="site-aside" aria-label="Cart summary">
+        <h2>Cart</h2>
+        <table class="purchase-table" aria-label="Purchase summary">
+          <tr><td>Subtotal</td><td class="price-col">$0.00</td></tr>
+          <tr><td>Shipping</td><td class="price-col">$0.00</td></tr>
+          <tr class="purchase-total"><td>Total</td><td class="price-col">$0.00</td></tr>
+        </table>
+        <button class="btn btn-primary btn-checkout" type="button">Checkout</button>
+      </aside>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copy">© Adrian Posada 2026</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

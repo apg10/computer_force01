@@ -1,0 +1,78 @@
+<!-- Skip link -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="Computer Force Home">
+      <img class="logo-img" src="assets/img/logo.png" alt="Computer Force logo">
+      <span class="logo-text">Computer Force</span>
+    </a>
+
+    <!-- Mobile controls (visible <=600px via CSS) -->
+    <div class="header-actions" aria-label="Mobile controls">
+      <button id="burgerBtn" class="icon-btn icon-btn--burger" type="button"
+        aria-expanded="false" aria-controls="mobileMenuPanel">
+        ☰ <span class="sr-only">Menu</span>
+      </button>
+
+      <button id="bagBtn" class="icon-btn icon-btn--bag" type="button"
+        aria-expanded="false" aria-controls="cartDrawer">
+        🛍 <span class="cart-badge" aria-label="Items in cart">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="site-menu" aria-label="Primary">
+  <div class="container menu-inner">
+    <div class="menu-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="developer.html">Developer</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </div>
+
+    <form class="menu-search" action="#" method="get" role="search" aria-label="Site search">
+      <input type="search" name="q" placeholder="Search products…">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <!-- Mobile panel (JS toggles hidden) -->
+  <div id="mobileMenuPanel" class="mobile-panel" hidden>
+    <div class="container mobile-panel-inner">
+      <div class="menu-nav">
+        <ul>
+          <li><a href="index.html" onclick="document.getElementById('mobileMenuPanel').hidden=true;">Home</a></li>
+          <li><a href="products.html" onclick="document.getElementById('mobileMenuPanel').hidden=true;">Products</a></li>
+          <li><a href="about.html" onclick="document.getElementById('mobileMenuPanel').hidden=true;">About</a></li>
+          <li><a href="developer.html" onclick="document.getElementById('mobileMenuPanel').hidden=true;">Developer</a></li>
+          <li><a href="register.html" onclick="document.getElementById('mobileMenuPanel').hidden=true;">Register</a></li>
+        </ul>
+      </div>
+
+      <form class="menu-search" action="#" method="get" role="search" aria-label="Site search (mobile)">
+        <input type="search" name="q" placeholder="Search products…">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Drawer overlay + cart drawer (mobile only) -->
+<div id="drawerOverlay" class="drawer-overlay" hidden></div>
+
+<aside id="cartDrawer" class="cart-drawer" hidden aria-label="Cart drawer">
+  <div class="cart-drawer__head">
+    <h2 class="cart-drawer__title">Your cart</h2>
+    <button id="closeDrawerBtn" class="icon-btn icon-btn--close" type="button">Close</button>
+  </div>
+
+  <div class="cart-drawer__body">
+    <p>Your cart is empty.</p>
+    <button class="btn btn-primary btn-checkout" type="button">Checkout</button>
+  </div>
+</aside>

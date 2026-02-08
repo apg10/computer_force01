@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Computer Force</title>
+  <meta name="description" content="Registration Form" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Computer Force Home">
+        <img class="logo-img" src="assets/img/logo.png" alt="Computer Force logo">
+        <span class="logo-text">Computer Force</span>
+      </a>
+
+      <div class="header-actions" aria-label="Mobile controls">
+        <button id="burgerBtn" class="icon-btn icon-btn--burger" type="button"
+          aria-expanded="false" aria-controls="mobileMenuPanel">
+          ☰ <span class="sr-only">Menu</span>
+        </button>
+
+        <button id="bagBtn" class="icon-btn icon-btn--bag" type="button"
+          aria-expanded="false" aria-controls="cartDrawer">
+          🛍 <span class="cart-badge" aria-label="Items in cart">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-menu" aria-label="Primary">
+    <div class="container menu-inner">
+      <div class="menu-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="developer.html">Developer</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+
+      <form class="menu-search" action="#" method="get" role="search" aria-label="Site search">
+        <input type="search" name="q" placeholder="Search products…">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <div id="mobileMenuPanel" class="mobile-panel" hidden>
+      <div class="container mobile-panel-inner">
+        <div class="menu-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="developer.html">Developer</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+
+        <form class="menu-search" action="#" method="get" role="search" aria-label="Site search (mobile)">
+          <input type="search" name="q" placeholder="Search products…">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div id="drawerOverlay" class="drawer-overlay" hidden></div>
+
+  <aside id="cartDrawer" class="cart-drawer" hidden aria-label="Cart drawer">
+    <div class="cart-drawer__head">
+      <h2 class="cart-drawer__title">Your cart</h2>
+      <button id="closeDrawerBtn" class="icon-btn icon-btn--close" type="button">Close</button>
+    </div>
+
+    <div class="cart-drawer__body">
+      <p>Your cart is empty.</p>
+      <button class="btn btn-primary btn-checkout" type="button">Checkout</button>
+    </div>
+  </aside>
+
+  <div class="page-shell">
+    <div class="container layout">
+
+      <main id="main" class="site-main">
+        <h1>Registration Form</h1>
+        <p>Please complete the following form to register for an account on our website.</p>
+
+        <form class="form" method="post" action="#">
+          <div class="form-row">
+            <label for="username">Username*</label>
+            <input id="username" name="username" type="text" required>
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email Address*</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="password">Password*</label>
+            <input id="password" name="password" type="password" required>
+          </div>
+
+          <div class="form-row">
+            <label for="confirm_password">Confirm Password*</label>
+            <input id="confirm_password" name="confirm_password" type="password" required>
+          </div>
+
+          <div class="form-row">
+            <label for="first_name">First Name*</label>
+            <input id="first_name" name="first_name" type="text" required>
+          </div>
+
+          <div class="form-row">
+            <label for="surname">Surname*</label>
+            <input id="surname" name="surname" type="text" required>
+          </div>
+
+          <div class="form-row">
+            <label for="gender">Gender*</label>
+            <select id="gender" name="gender" required>
+              <option value="" selected disabled>Select…</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="dob">Date of Birth</label>
+            <input id="dob" name="dob" type="date">
+          </div>
+
+          <div class="form-row">
+            <label for="address">Address*</label>
+            <input id="address" name="address" type="text" required>
+          </div>
+
+          <div class="form-row">
+            <label for="suburb">Suburb*</label>
+            <input id="suburb" name="suburb" type="text" required>
+          </div>
+
+          <div class="form-row">
+            <label for="postcode">Postcode*</label>
+            <input id="postcode" name="postcode" type="text" required>
+          </div>
+
+          <div class="form-row">
+            <label for="state">State*</label>
+            <select id="state" name="state" required>
+              <option value="" selected disabled>Select…</option>
+              <option>ACT</option>
+              <option>NSW</option>
+              <option>NT</option>
+              <option>QLD</option>
+              <option>SA</option>
+              <option>TAS</option>
+              <option>VIC</option>
+              <option>WA</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel">
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-muted" type="reset">Clear</button>
+            <button class="btn btn-primary" type="submit">Register</button>
+          </div>
+        </form>
+      </main>
+
+      <aside class="site-aside" aria-label="Cart summary">
+        <h2>Cart</h2>
+        <table class="purchase-table" aria-label="Purchase summary">
+          <tr><td>Subtotal</td><td class="price-col">$0.00</td></tr>
+          <tr><td>Shipping</td><td class="price-col">$0.00</td></tr>
+          <tr class="purchase-total"><td>Total</td><td class="price-col">$0.00</td></tr>
+        </table>
+        <button class="btn btn-primary btn-checkout" type="button">Checkout</button>
+      </aside>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-copy">© Adrian Posada 2026</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
