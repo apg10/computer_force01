@@ -25,7 +25,7 @@
       
       <form class="menu-search" action="#" method="get" role="search" aria-label="Site search">
         <label class="sr-only" for="site-search">Search products</label>
-        <input id="site-search" type="search" name="q" placeholder="Search products…">
+        <input id="site-search-desktop" type="search" name="q" placeholder="Search products…" autocomplete="off">
         <button type="submit" aria-label="Search">Search</button>
       </form>
 
@@ -67,11 +67,12 @@
             <li><a href="register.html">Register</a></li>
           </ul>
         </div>
-
+        
         <form class="menu-search" action="#" method="get" role="search" aria-label="Site search (mobile)">
-          <input type="search" name="q" placeholder="Search products…">
-          <button type="submit">Search</button>
-        </form>
+         <label class="sr-only" for="site-search-mobile">Search products</label>
+         <input id="site-search-mobile" type="search" name="q" placeholder="Search products…" autocomplete="off">
+         <button type="submit" aria-label="Search">Search</button>
+        </form>        
       </div>
     </div>
   </nav>
