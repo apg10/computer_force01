@@ -364,17 +364,17 @@ p{ margin:0 0 12px 0; color:var(--muted); }
   background:rgba(255,255,255,.10);
   color:#fff;
 }
-.menu-search input::placeholder{ color:rgba(255,255,255,.78); }
+.menu-search input::placeholder{ color:rgba(255,255,255,.85); }
 .menu-search button{
   padding:10px 12px;
   border-radius:12px;
   border:1px solid rgba(255,255,255,.18);
-  background:rgba(255,255,255,.10);
+  background:rgba(255,255,255,.18);
   color:#fff;
   font-weight:900;
   cursor:pointer;
 }
-.menu-search button:hover{ background:rgba(255,255,255,.18); }
+.menu-search button:hover{ background:rgba(255,255,255,.26); }
 .menu-search input:focus{
   outline:none;
   border-color:rgba(255,255,255,.45);
