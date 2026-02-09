@@ -313,7 +313,8 @@ p{ margin:0 0 12px 0; color:var(--muted); }
   height:36px;
   border-radius:999px;
   border:1px solid rgba(255,255,255,.20);
-  background:rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.28);
+  background: rgba(255,255,255,.18);
   color:#fff;
   padding:0 14px;
 }
@@ -371,12 +372,13 @@ p{ margin:0 0 12px 0; color:var(--muted); }
   padding:10px 12px;
   border-radius:12px;
   border:1px solid rgba(255,255,255,.18);
-  background:rgba(255,255,255,.18);
+  background: rgba(255,255,255,.18);
+  border-color: rgba(255,255,255,.28);
   color:#fff;
   font-weight:900;
   cursor:pointer;
 }
-.menu-search button:hover{ background:rgba(255,255,255,.26); }
+.menu-search button:hover{ background: rgba(255,255,255,.24); }
 .menu-search input:focus{
   outline:none;
   border-color:rgba(255,255,255,.45);
