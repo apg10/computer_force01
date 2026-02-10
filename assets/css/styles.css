@@ -225,8 +225,11 @@ p{ margin:0 0 12px 0; color:var(--muted); }
   margin-left:auto;
   display:flex;
   align-items:center;
+  justify-content:flex-end; /* <<< clave */
   gap:8px;
+
   width:min(520px, 46vw);
+  flex-wrap:nowrap;         /* <<< clave: no baja el botón */
 }
 
 /* Shared search look */
@@ -248,7 +251,8 @@ p{ margin:0 0 12px 0; color:var(--muted); }
 }
 
 .header-search input{
-  flex:1;
+  flex:1 1 auto;
+  min-width:260px; 
   height:38px;
   padding:0 12px;
   border-radius:10px;
@@ -273,6 +277,7 @@ p{ margin:0 0 12px 0; color:var(--muted); }
   border-radius:10px;
   cursor:pointer;
   font-weight:900;
+  flex:0 0 auto;
 }
 .menu-search button{
   padding:10px 12px;
@@ -285,6 +290,32 @@ p{ margin:0 0 12px 0; color:var(--muted); }
 .menu-search button:hover{
   background:#ffffff;
 }
+
+/* Fix: search in HEADER must be one row */
+.site-header .menu-search{
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:8px;
+  width:min(520px, 46vw);
+  flex-wrap:nowrap;
+}
+
+.site-header .menu-search input{
+  flex:1 1 auto;
+  min-width:260px;
+}
+
+.site-header .menu-search button{
+  flex:0 0 auto;
+}
+
+/* Extra safety: don't allow header row to wrap */
+.site-header .header-inner{
+  flex-wrap:nowrap;
+}
+
 
 /* Header actions stay at far right */
 .header-actions{ margin-left:10px; }
