@@ -993,3 +993,29 @@ input:focus, select:focus{
   .dev-title{ font-size: 32px; }
   .feature-grid{ grid-template-columns: 1fr; }
 }
+
+
+/* Fix: search in HEADER must be one row */
+.site-header .menu-search{
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:8px;
+  width:min(520px, 46vw);
+  flex-wrap:nowrap;
+}
+
+.site-header .menu-search input{
+  flex:1 1 auto;
+  min-width:260px;
+}
+
+.site-header .menu-search button{
+  flex:0 0 auto;
+}
+
+/* Extra safety: don't allow header row to wrap */
+.site-header .header-inner{
+  flex-wrap:nowrap;
+}
