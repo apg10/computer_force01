@@ -1,5 +1,5 @@
 /* =========================
-   Computer Force - Global CSS (CLEAN)
+   Computer Force - Global CSS (CLEAN + FIXED)
    Desktop >600px: main 80% / aside 20%
    Mobile <=600px: burger shows mobile panel, bag shows drawer
 ========================= */
@@ -48,11 +48,7 @@ ul{ margin:0; padding:0; }
 
 .container{ width:min(92%, 1180px); margin:0 auto; }
 
-.page-shell{
-  flex:1;
-  padding:18px 0 26px;
-}
-
+.page-shell{ flex:1; padding:18px 0 26px; }
 .site-footer{ margin-top:auto; }
 
 /* ---------- Accessibility ---------- */
@@ -128,19 +124,18 @@ p{ margin:0 0 12px 0; color:var(--muted); }
   color: var(--text);
   border: 1px solid var(--border);
 }
-.btn-muted:hover{
-  background: rgba(15,23,42,.10);
-}
+.btn-muted:hover{ background: rgba(15,23,42,.10); }
 
 .btn-checkout{ width:100%; margin-top:12px; }
 
 /* =========================
-   Header (logo + search right)
+   Header (logo + header search)
 ========================= */
 .site-header{
   position:sticky; top:0; z-index:60;
   background:var(--header);
   border-bottom:1px solid rgba(255,255,255,.14);
+  overflow-x:hidden; /* evita scroll lateral por overflow */
 }
 
 .header-inner{
@@ -148,6 +143,7 @@ p{ margin:0 0 12px 0; color:var(--muted); }
   align-items:center;
   gap:14px;
   padding:12px 0;
+  flex-wrap:nowrap;
 }
 
 .logo{
@@ -172,6 +168,7 @@ p{ margin:0 0 12px 0; color:var(--muted); }
   display:flex;
   gap:10px;
   align-items:center;
+  margin-left:10px;
 }
 
 /* Icon buttons */
@@ -219,25 +216,15 @@ p{ margin:0 0 12px 0; color:var(--muted); }
 }
 
 /* =========================
-   Search UI (WHITE/GRAY card style)
-   Applies to header search and mobile panel search
+   Search UI (WHITE/GRAY)
+   Applies to header (.site-header .menu-search) and mobile panel (.mobile-panel .menu-search)
 ========================= */
-
-/* Search in header (right aligned) */
-.header-search{
-  margin-left:auto;
+.menu-search{
   display:flex;
   align-items:center;
-  justify-content:flex-end; /* <<< clave */
   gap:8px;
-
-  width:min(520px, 46vw);
-  flex-wrap:nowrap;         /* <<< clave: no baja el botón */
 }
 
-/* Shared search look */
-.header-search input,
-.header-search button,
 .menu-search input,
 .menu-search button{
   background: rgba(255,255,255,.92);
@@ -245,93 +232,51 @@ p{ margin:0 0 12px 0; color:var(--muted); }
   color: #0f172a;
 }
 
-.header-search input,
 .menu-search input{
   width:100%;
   padding:10px 12px;
   border-radius:12px;
   font-size:.95rem;
-}
-
-.header-search input{
-  flex:1 1 auto;
-  min-width:260px; 
-  height:38px;
-  padding:0 12px;
-  border-radius:10px;
   background:#f1f5f9;
   border:1px solid #cbd5e1;
   color:#0f172a;
 }
 
-.header-search input::placeholder,
 .menu-search input::placeholder{
-  color: #334155;
-  opacity: 1;
+  color:#334155;
+  opacity:1;
 }
 
-.header-search input:focus,
 .menu-search input:focus{
   outline:none;
   border-color: rgba(37,99,235,.35);
   box-shadow:0 0 0 3px rgba(37,99,235,.18);
 }
 
-.header-search button{
-  height:38px;
-  width:42px;
-  border-radius:10px;
-  cursor:pointer;
-  font-weight:900;
-  flex:0 0 auto;
-  background:#e2e8f0;
-  border:1px solid #cbd5e1;
-  color:#0f172a;
-}
 .menu-search button{
   padding:10px 12px;
   border-radius:12px;
   cursor:pointer;
   font-weight:900;
+  background:#e2e8f0;
+  border:1px solid #cbd5e1;
+  color:#0f172a;
 }
+.menu-search button:hover{ background:#cbd5e1; }
 
-.header-search button:hover,
-.menu-search button:hover{
-  background:#cbd5e1;
-}
-
-/* Fix: search in HEADER must be one row */
+/* Header search: right aligned + single row */
 .site-header .menu-search{
   margin-left:auto;
-  display:flex;
-  align-items:center;
   justify-content:flex-end;
-  gap:8px;
   width:min(520px, 46vw);
   flex-wrap:nowrap;
 }
-
 .site-header .menu-search input{
   flex:1 1 auto;
   min-width:260px;
 }
-
 .site-header .menu-search button{
   flex:0 0 auto;
-}
-
-/* Extra safety: don't allow header row to wrap */
-.site-header .header-inner{
-  flex-wrap:nowrap;
-}
-
-
-/* Header actions stay at far right */
-.header-actions{ margin-left:10px; }
-
-/* Mobile: hide header search, keep menu panel search */
-@media (max-width: 600px){
-  .header-search{ display:none; }
 }
 
 /* =========================
@@ -340,6 +285,7 @@ p{ margin:0 0 12px 0; color:var(--muted); }
 .site-menu{
   background:rgba(11,58,164,.92);
   border-bottom:1px solid rgba(255,255,255,.14);
+  overflow-x:hidden;
 }
 
 .menu-inner{
@@ -350,7 +296,7 @@ p{ margin:0 0 12px 0; color:var(--muted); }
   padding:10px 0;
 }
 
-/* Nav buttons (wireframe-ish) */
+/* Nav buttons */
 .menu-nav ul{
   list-style:none;
   display:flex;
@@ -372,9 +318,7 @@ p{ margin:0 0 12px 0; color:var(--muted); }
   transition:background .15s ease, border-color .15s ease, transform .12s ease;
 }
 
-.menu-nav a:hover{
-  background:rgba(255,255,255,.14);
-}
+.menu-nav a:hover{ background:rgba(255,255,255,.14); }
 
 /* Mobile panel (shown by JS) */
 .mobile-panel{
@@ -388,7 +332,7 @@ p{ margin:0 0 12px 0; color:var(--muted); }
 }
 .mobile-panel .menu-nav ul{ flex-direction:column; }
 .mobile-panel .menu-nav a{ width:100%; justify-content:flex-start; }
-.mobile-panel .menu-search{ justify-content:flex-start; }
+.mobile-panel .menu-search{ width:100%; justify-content:flex-start; }
 .mobile-panel .menu-search input{ width:100%; }
 
 /* =========================
@@ -453,13 +397,11 @@ p{ margin:0 0 12px 0; color:var(--muted); }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-
   padding: 6px 12px;
   border-radius: 999px;
   background: rgba(37,99,235,.12);
   border: 1px solid rgba(0, 1, 2, 0.25);
   color: var(--brand-dark);
-
   font-weight: 800;
   font-size: 13px;
   margin: 0 0 10px;
@@ -575,7 +517,7 @@ p{ margin:0 0 12px 0; color:var(--muted); }
   .home-page .hero-title{ font-size: 34px; }
 }
 
-/* Categories grid (2 cols mobile, 4 cols desktop) */
+/* Categories grid */
 .home-page .category-grid{
   display:grid;
   grid-template-columns:repeat(2, 1fr);
@@ -596,7 +538,6 @@ p{ margin:0 0 12px 0; color:var(--muted); }
   overflow:hidden;
   transition:transform .12s ease, box-shadow .12s ease;
 }
-
 .home-page .category-tile:hover{ transform:translateY(-2px); box-shadow:var(--shadow); }
 
 .home-page .category-tile__img{ padding:10px 10px 0; }
@@ -642,7 +583,6 @@ p{ margin:0 0 12px 0; color:var(--muted); }
   box-shadow:var(--shadow-sm);
   transition:transform .12s ease, box-shadow .12s ease;
 }
-
 .card:hover{ transform:translateY(-2px); box-shadow:var(--shadow); }
 
 .card h2{
@@ -757,18 +697,29 @@ input:focus, select:focus{
 }
 
 /* =========================
-   MOBILE NAV (scoped correctly)
+   MOBILE NAV + MOBILE FIXES
 ========================= */
 @media (max-width: 600px){
 
-  /* Hide desktop menu row pieces (mobile uses panel) */
+  /* IMPORTANT: hide DESKTOP header search (your actual markup) */
+  .site-header .menu-search{
+    display:none;
+  }
+
+  /* Hide desktop menu nav row */
   .site-menu .menu-inner > .menu-nav{
-    display:none !important;
+    display:none;
   }
 
   /* Mobile panel visibility */
   .mobile-panel[hidden]{ display:none !important; }
   .mobile-panel{ display:block; }
+
+  /* Optional: hide logo text to keep header clean on tiny widths */
+  .logo-text{ display:none; }
+
+  /* Prevent any horizontal scroll */
+  html, body{ overflow-x:hidden; }
 
   /* Ensure burger + bag are visible */
   .icon-btn--burger,
@@ -1001,30 +952,4 @@ input:focus, select:focus{
   .dev-hero-inner{ grid-template-columns: 1fr; }
   .dev-title{ font-size: 32px; }
   .feature-grid{ grid-template-columns: 1fr; }
-}
-
-
-/* Fix: search in HEADER must be one row */
-.site-header .menu-search{
-  margin-left:auto;
-  display:flex;
-  align-items:center;
-  justify-content:flex-end;
-  gap:8px;
-  width:min(520px, 46vw);
-  flex-wrap:nowrap;
-}
-
-.site-header .menu-search input{
-  flex:1 1 auto;
-  min-width:260px;
-}
-
-.site-header .menu-search button{
-  flex:0 0 auto;
-}
-
-/* Extra safety: don't allow header row to wrap */
-.site-header .header-inner{
-  flex-wrap:nowrap;
 }
