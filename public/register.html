@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About - Computer Force</title>
-  <meta name="description" content="Learn about Computer Force: our story, what we do, and how we help customers choose the right tech." />
+  <title>Register - Computer Force</title>
+  <meta name="description" content="Registration Form" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
 
@@ -22,6 +22,7 @@
         <img class="logo-img" src="assets/img/logo.png" alt="Computer Force logo">
         <span class="logo-text">Computer Force</span>
       </a>
+      
       <form class="menu-search" action="#" method="get" role="search" aria-label="Site search">
         <label hidden for="site-search-desktop">Search products</label>
 
@@ -75,7 +76,7 @@
             <li><a href="register.html">Register</a></li>
           </ul>
         </div>
-
+        
         <form class="menu-search" action="#" method="get" role="search" aria-label="Site search (mobile)">
           <label hidden for="site-search-mobile">Search products</label>
 
@@ -89,7 +90,7 @@
           >
 
           <button type="submit" aria-label="Search">Search</button>
-        </form>
+        </form>        
       </div>
     </div>
   </nav>
@@ -112,77 +113,94 @@
     <div class="container layout">
 
       <main id="main" class="site-main">
-        <section class="about-page" aria-label="About Computer Force">
+        <h1>Registration Form</h1>
+        <p>Please complete the following form to register for an account on our website.</p>
 
-          <div class="about-hero">
-            <div class="about-hero__inner">
-
-              <div class="about-hero__left">
-                <span class="about-pill">Computer Force</span>
-
-                <h1 class="about-title">
-                  ABOUT <span>US</span>
-                </h1>
-
-                <p class="about-lead">
-                  We help people choose the right computers, components, and peripherals with confidence.
-                  Reliable advice, curated products, and a straightforward shopping experience.
-                </p>
-
-                <div class="about-actions" aria-label="Quick actions">
-                  <a class="about-link" href="products.html">Browse Products</a>
-                  <a class="about-link" href="register.html">Create Account</a>
-                </div>
-
-                <div class="about-stats" aria-label="Highlights">
-                  <article class="about-stat">
-                    <div class="about-stat__value">20+</div>
-                    <div class="about-stat__label">Years in tech retail</div>
-                  </article>
-
-                  <article class="about-stat">
-                    <div class="about-stat__value">1,000+</div>
-                    <div class="about-stat__label">Customers helped</div>
-                  </article>
-
-                  <article class="about-stat">
-                    <div class="about-stat__value">Fast</div>
-                    <div class="about-stat__label">Local delivery options</div>
-                  </article>
-                </div>
-              </div>
-
-              <div class="about-hero__right" aria-label="About image">
-                <img
-                  src="assets/img/tech_staff.png"
-                  alt="Computer Force team and workspace"
-                  class="about-hero__img">
-              </div>
-
-            </div>
+        <form class="form" method="post" action="#">
+          <div class="form-row">
+            <label for="username">Username*</label>
+            <input id="username" name="username" type="text" required>
           </div>
 
-          <div class="about-content">
-            <h2>What we do</h2>
-            <p>
-              We focus on a clean, tech-store style experience: clear categories, simple navigation,
-              and product discovery that feels fast and modern.
-            </p>
-
-            <h2>Why customers choose us</h2>
-            <ul class="bullet">
-              <li>Curated range across computers, laptops, and peripherals</li>
-              <li>Clear, practical guidance without sales pressure</li>
-              <li>Simple checkout flow and transparent totals</li>
-            </ul>
-
-            <h2>Need help?</h2>
-            <p>
-              Visit our Products page to browse categories, or create an account to get started.
-            </p>
+          <div class="form-row">
+            <label for="email">Email Address*</label>
+            <input id="email" name="email" type="email" required>
           </div>
 
-        </section>
+          <div class="form-row">
+            <label for="password">Password*</label>
+            <input id="password" name="password" type="password" required>
+          </div>
+
+          <div class="form-row">
+            <label for="confirm_password">Confirm Password*</label>
+            <input id="confirm_password" name="confirm_password" type="password" required>
+          </div>
+
+          <div class="form-row">
+            <label for="first_name">First Name*</label>
+            <input id="first_name" name="first_name" type="text" required>
+          </div>
+
+          <div class="form-row">
+            <label for="surname">Surname*</label>
+            <input id="surname" name="surname" type="text" required>
+          </div>
+
+          <div class="form-row">
+            <label for="gender">Gender*</label>
+            <select id="gender" name="gender" required>
+              <option value="" selected disabled>Select…</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="dob">Date of Birth</label>
+            <input id="dob" name="dob" type="date">
+          </div>
+
+          <div class="form-row">
+            <label for="address">Address*</label>
+            <input id="address" name="address" type="text" required>
+          </div>
+
+          <div class="form-row">
+            <label for="suburb">Suburb*</label>
+            <input id="suburb" name="suburb" type="text" required>
+          </div>
+
+          <div class="form-row">
+            <label for="postcode">Postcode*</label>
+            <input id="postcode" name="postcode" type="text" required>
+          </div>
+
+          <div class="form-row">
+            <label for="state">State*</label>
+            <select id="state" name="state" required>
+              <option value="" selected disabled>Select…</option>
+              <option>ACT</option>
+              <option>NSW</option>
+              <option>NT</option>
+              <option>QLD</option>
+              <option>SA</option>
+              <option>TAS</option>
+              <option>VIC</option>
+              <option>WA</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel">
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-muted" type="reset">Clear</button>
+            <button class="btn btn-primary" type="submit">Register</button>
+          </div>
+        </form>
       </main>
 
       <aside class="site-aside" aria-label="Cart summary">
@@ -200,7 +218,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p class="footer-copy">© Adrian Posada 2026</p>
+      <p class="footer-copy">© Adrian Posada</p>
     </div>
   </footer>
 

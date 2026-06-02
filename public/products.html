@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Register - Computer Force</title>
-  <meta name="description" content="Registration Form" />
+  <title>Products | Computer Force</title>
+  <meta name="description" content="Browse products by category on Computer Force" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
 
@@ -22,7 +22,6 @@
         <img class="logo-img" src="assets/img/logo.png" alt="Computer Force logo">
         <span class="logo-text">Computer Force</span>
       </a>
-      
       <form class="menu-search" action="#" method="get" role="search" aria-label="Site search">
         <label hidden for="site-search-desktop">Search products</label>
 
@@ -76,7 +75,7 @@
             <li><a href="register.html">Register</a></li>
           </ul>
         </div>
-        
+
         <form class="menu-search" action="#" method="get" role="search" aria-label="Site search (mobile)">
           <label hidden for="site-search-mobile">Search products</label>
 
@@ -90,7 +89,8 @@
           >
 
           <button type="submit" aria-label="Search">Search</button>
-        </form>        
+        </form> 
+        
       </div>
     </div>
   </nav>
@@ -113,94 +113,70 @@
     <div class="container layout">
 
       <main id="main" class="site-main">
-        <h1>Registration Form</h1>
-        <p>Please complete the following form to register for an account on our website.</p>
+        <h1>Products we sell</h1>
+        <p>Computer Force is your online expert in all things computing</p>
 
-        <form class="form" method="post" action="#">
-          <div class="form-row">
-            <label for="username">Username*</label>
-            <input id="username" name="username" type="text" required>
-          </div>
+        <section class="grid-2 product-grid" aria-label="Product categories">
+          <article class="card product-card" id="audio">
+            <h2>Audio</h2>
+            <img src="assets/img/microphone.png" alt="Audio category image">
+          </article>
 
-          <div class="form-row">
-            <label for="email">Email Address*</label>
-            <input id="email" name="email" type="email" required>
-          </div>
+          <article class="card product-card" id="computers">
+            <h2>Computers</h2>
+            <img src="assets/img/computers.png" alt="Computers category image">
+          </article>
 
-          <div class="form-row">
-            <label for="password">Password*</label>
-            <input id="password" name="password" type="password" required>
-          </div>
+          <article class="card product-card" id="graphics-cards">
+            <h2>Graphics cards</h2>
+            <img src="assets/img/gpu.png" alt="Graphics cards category image">
+          </article>
 
-          <div class="form-row">
-            <label for="confirm_password">Confirm Password*</label>
-            <input id="confirm_password" name="confirm_password" type="password" required>
-          </div>
+          <article class="card product-card" id="keyboard-mice">
+            <h2>Keyboards</h2>
+            <img src="assets/img/keyboard.png" alt="Keyboard and mice category image">
+          </article>
 
-          <div class="form-row">
-            <label for="first_name">First Name*</label>
-            <input id="first_name" name="first_name" type="text" required>
-          </div>
+          <article class="card product-card" id="laptops">
+            <h2>Laptops</h2>
+            <img src="assets/img/laptops.png" alt="Laptops category image">
+          </article>
 
-          <div class="form-row">
-            <label for="surname">Surname*</label>
-            <input id="surname" name="surname" type="text" required>
-          </div>
+          <article class="card product-card" id="monitors">
+            <h2>Monitors</h2>
+            <img src="assets/img/monitors.png" alt="Monitors category image">
+          </article>
 
-          <div class="form-row">
-            <label for="gender">Gender*</label>
-            <select id="gender" name="gender" required>
-              <option value="" selected disabled>Select…</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-          </div>
+          <article class="card product-card" id="networking">
+            <h2>Networking</h2>
+            <img src="assets/img/network.png" alt="Networking category image">
+          </article>
 
-          <div class="form-row">
-            <label for="dob">Date of Birth</label>
-            <input id="dob" name="dob" type="date">
-          </div>
+          <article class="card product-card" id="peripherals">
+            <h2>Peripherals</h2>
+            <img src="assets/img/Peripherals.png" alt="Peripherals category image">
+          </article>
 
-          <div class="form-row">
-            <label for="address">Address*</label>
-            <input id="address" name="address" type="text" required>
-          </div>
+          <article class="card product-card" id="printing-scanning">
+            <h2>Printing &amp; scanning</h2>
+            <img src="assets/img/printers.png" alt="Printing and scanning category image">
+          </article>
 
-          <div class="form-row">
-            <label for="suburb">Suburb*</label>
-            <input id="suburb" name="suburb" type="text" required>
-          </div>
+          <article class="card product-card" id="software">
+            <h2>Software</h2>
+            <img src="assets/img/software.png" alt="Software category image">
+          </article>
 
-          <div class="form-row">
-            <label for="postcode">Postcode*</label>
-            <input id="postcode" name="postcode" type="text" required>
-          </div>
+          <article class="card product-card" id="storage">
+            <h2>Storage</h2>
+            <img src="assets/img/storage.png" alt="Storage category image">
+          </article>
 
-          <div class="form-row">
-            <label for="state">State*</label>
-            <select id="state" name="state" required>
-              <option value="" selected disabled>Select…</option>
-              <option>ACT</option>
-              <option>NSW</option>
-              <option>NT</option>
-              <option>QLD</option>
-              <option>SA</option>
-              <option>TAS</option>
-              <option>VIC</option>
-              <option>WA</option>
-            </select>
-          </div>
-
-          <div class="form-row">
-            <label for="phone">Phone number</label>
-            <input id="phone" name="phone" type="tel">
-          </div>
-
-          <div class="form-actions">
-            <button class="btn btn-muted" type="reset">Clear</button>
-            <button class="btn btn-primary" type="submit">Register</button>
-          </div>
-        </form>
+          <article class="card product-card" id="tablets">
+            <h2>Tablets</h2>
+            <img src="assets/img/tablets.png" alt="Tablets category image">
+          </article>
+        </section>
       </main>
 
       <aside class="site-aside" aria-label="Cart summary">
@@ -218,7 +194,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p class="footer-copy">© Adrian Posada</p>
+      <p class="footer-copy">© Adrian Posada 2026</p>
     </div>
   </footer>
 
